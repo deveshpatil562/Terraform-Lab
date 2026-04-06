@@ -1,184 +1,153 @@
-# 🚀 Terraform Basics Lab — Infrastructure as Code on AWS
+# 🚀 Terraform Lab — My Infrastructure as Code Learning Journey
 
-## 📖 Overview
+## 📖 About This Repository
 
-This repository showcases my hands-on learning of **Terraform**, where I provisioned and managed AWS infrastructure using code.
+This repository documents my hands-on learning of **Terraform** as part of my DevOps journey.  
+Here, I practice **Infrastructure as Code (IaC)** by building, modifying, and destroying real cloud infrastructure on AWS.
 
-Instead of manually creating resources through the AWS Console, this project demonstrates how **Infrastructure as Code (IaC)** enables automation, consistency, and version control in modern DevOps workflows.
-
----
-
-## 🎯 Objectives
-
-- Understand Infrastructure as Code (IaC)
-- Install and configure Terraform
-- Configure AWS CLI with credentials
-- Provision AWS resources using Terraform
-- Understand Terraform state management
-- Modify and destroy infrastructure safely
+Each lab in this repo represents a practical step toward mastering how modern infrastructure is automated in real-world DevOps environments.
 
 ---
 
-## 🧠 What I Learned
+## 🎯 Purpose of This Repo
 
-- Terraform follows a **declarative approach** (define desired state)
-- Difference between `plan`, `apply`, and `destroy`
-- Importance of `terraform.tfstate`
-- How Terraform tracks infrastructure changes
-- Real-world DevOps workflow for provisioning infra
-
----
-
-## 🏗️ Infrastructure Created
-
-Using Terraform, I provisioned:
-
-- 🪣 S3 Bucket (globally unique name)
-- 💻 EC2 Instance (Amazon Linux 2 - t2.micro)
+- Learn Terraform from basics to advanced
+- Practice real-world infrastructure provisioning
+- Build a strong DevOps portfolio
+- Document learnings in a structured way
+- Prepare for DevOps/Cloud interviews
 
 ---
 
-## 📁 Project Structure
+## 🧠 What is Infrastructure as Code (IaC)?
 
-.
-├── main.tf                # Terraform configuration  
-├── terraform.tfstate     # State file (ignored in Git)  
-├── .terraform/           # Provider plugins  
-├── .gitignore            # Ignore sensitive files  
-└── README.md             # Project documentation  
+Infrastructure as Code is the practice of managing infrastructure using code instead of manual processes.
+
+Instead of clicking in AWS Console:
+- We write configuration files
+- Version control them using Git
+- Apply them using tools like Terraform
+
+👉 Result: Consistent, repeatable, and automated infrastructure
 
 ---
 
-## 🔧 Prerequisites
-
-Make sure you have the following installed:
+## ⚙️ Tools & Technologies Used
 
 - Terraform
+- AWS (S3, EC2, IAM, VPC - upcoming)
 - AWS CLI
-- AWS account with IAM credentials configured
+- Git & GitHub
 
 ---
 
-## ⚙️ Setup & Usage
+## 📂 Repository Structure
 
-### 1️⃣ Clone Repository
-
-[ git clone https://github.com/your-username/terraform-basics-lab.git ]  
-[ cd terraform-basics-lab ]
-
----
-
-### 2️⃣ Initialize Terraform
-
-[ terraform init ]
+.
+├── 2026/  
+│   ├── Day1/  
+│   │   └── terraform-intro.md  
+│   ├── Day2/  
+│   └── ...  
+├── terraform-projects/  
+└── README.md  
 
 ---
 
-### 3️⃣ Preview Execution Plan
+## 📘 Labs Covered
 
-[ terraform plan ]
-
----
-
-### 4️⃣ Apply Configuration
-
-[ terraform apply ]
-
-Type `yes` when prompted.
+### 📌 Terraform Basics
+- Introduction to Terraform
+- Understanding IaC
+- Terraform lifecycle (init, plan, apply, destroy)
+- Creating S3 bucket
+- Launching EC2 instance
+- Understanding state file
 
 ---
 
-### 5️⃣ Verify Resources
+## 🔄 How I Approach Learning
 
-- Check S3 bucket in AWS Console  
-- Check EC2 instance is running  
+For every lab, I follow this structure:
 
----
-
-### 6️⃣ Destroy Infrastructure
-
-[ terraform destroy ]
-
----
-
-## 📊 Terraform Commands Explained
-
-| Command                 | Description                          |
-|------------------------|--------------------------------------|
-| terraform init         | Initialize working directory         |
-| terraform plan         | Preview infrastructure changes       |
-| terraform apply        | Create/update resources              |
-| terraform destroy      | Delete all resources                 |
-| terraform show         | Show current state                   |
-| terraform state list   | List tracked resources               |
+1. Understand the concept  
+2. Write Terraform code  
+3. Run commands and observe output  
+4. Verify resources in AWS  
+5. Document learnings  
+6. Clean up resources  
 
 ---
 
-## 📂 Terraform State (Important)
+## 🧪 Common Terraform Workflow
 
-Terraform stores infrastructure details in:
+[ terraform init ] → Initialize project  
+[ terraform plan ] → Preview changes  
+[ terraform apply ] → Create resources  
+[ terraform destroy ] → Clean up  
 
-- terraform.tfstate
+---
 
-### Contains:
-- Resource IDs  
-- Configuration details  
-- Metadata & dependencies  
+## 📊 Key Learnings So Far
 
-### ⚠️ Best Practices:
-- Never edit state file manually  
-- Never commit it to GitHub  
-- Use remote backend in real projects  
+- Terraform uses a **declarative approach**
+- State file is the heart of Terraform
+- Infrastructure can be version-controlled
+- Easy to scale and replicate environments
+- Automation reduces human errors
+
+---
+
+## ⚠️ Best Practices I Follow
+
+- Never commit `.tfstate` files  
+- Use `.gitignore` for sensitive data  
+- Run `terraform fmt` before commit  
+- Validate configs using `terraform validate`  
+- Use meaningful naming conventions  
 
 ---
 
 ## 📸 Screenshots
 
-Add your screenshots here:
-
-- Terraform Apply Output  
-- AWS S3 Bucket  
-- EC2 Instance Running  
-
----
-
-## 🧹 Best Practices Followed
-
-- Used `.gitignore` for sensitive files  
-- Followed proper naming conventions  
-- Used `terraform fmt` and `terraform validate`  
-- Maintained clean and simple project structure  
+Each lab includes:
+- Terraform execution output  
+- AWS Console verification  
+- Resource creation proof  
 
 ---
 
-## 💡 Key Takeaways
+## 🚀 Future Learning Plan
 
-- Infrastructure can be fully automated using code  
-- Terraform ensures repeatability and consistency  
-- State management is critical in IaC  
-- Easy to scale and modify infrastructure  
-
----
-
-## 🔥 Future Improvements
-
-- Add remote backend (S3 + DynamoDB)  
-- Use Terraform modules  
-- Create VPC and networking setup  
-- Integrate with CI/CD pipelines  
+- Remote Backend (S3 + DynamoDB)
+- Terraform Modules
+- VPC & Networking
+- Load Balancers & Auto Scaling
+- Kubernetes Infrastructure using Terraform
+- CI/CD Integration with Terraform
 
 ---
 
-## 🤝 Connect With Me
+## 🎯 Goal
 
-If you found this useful, feel free to ⭐ this repository and connect with me!
+To become proficient in:
+- Terraform
+- Cloud Infrastructure Automation
+- Real-world DevOps practices
+
+---
+
+## 🤝 Contribution / Feedback
+
+This is a personal learning repository, but feedback and suggestions are always welcome!
 
 ---
 
 ## 📢 Learning in Public
 
-Started my Terraform journey 🚀  
-Created AWS infrastructure using code and destroyed it in seconds.  
-Infrastructure as Code finally makes sense!
+I believe in learning by building and sharing.  
+This repository is part of my journey to becoming a skilled DevOps Engineer.
 
-#Terraform #AWS #DevOps #IaC #CloudComputing
+---
+
+⭐ If you find this helpful, consider giving it a star!
